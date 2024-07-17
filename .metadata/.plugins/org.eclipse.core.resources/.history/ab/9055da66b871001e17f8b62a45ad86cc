@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planning System Signin</title>
+    <link rel="stylesheet" href="css\signin.css">
+</head>
+<body>
+<style>
+   body {
+            
+            background-image: url("images/signin.jpg");
+        
+        }
+</style>
+    <br><br><br><br><br><br><br>
+    <div class="container">
+        <h1>Sign in</h1>
+        <form id="signinForm" action="signup.html" method="post">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+
+            
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+
+            
+
+            <button type="submit">Sign in</button>
+        </form>
+        <p id="errorText"></p>
+    </div>
+
+</body>
+</html>

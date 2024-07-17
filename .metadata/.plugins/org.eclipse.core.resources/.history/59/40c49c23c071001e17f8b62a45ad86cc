@@ -1,0 +1,154 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Event Planning System</title>
+    <link rel="stylesheet" type="text/css" href="css\home.css">
+
+
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-inverse">
+
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="#"><b>Elegant and Elite Events</b></a>
+
+                </div>
+                <ul class="nav navbar-nav">
+
+                    <li ><a href="Home.jsp">Home</a></li>
+                    <li class="active"><a href="Navigate.jsp">Book now</a></liclass="active">
+                    <li><a href="Signup.jsp">Sign Up</a></li>
+                    <li><a href="Signin.jsp">Sign in</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            background-image: url("images/navigate.jpg");
+            background-size: cover
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .step {
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            border-radius: 50%;
+            margin: 0 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .step:hover {
+                background-color: #FF8C00;
+            }
+
+        .form {
+            display: none;
+        }
+
+            .form.active {
+                display: block;
+            }
+    </style>
+    </head>
+    <body>
+
+        <div class="navigation">
+            <div class="step" id="step1">Step 1</div>
+            <div class="step" id="step2">Step 2</div>
+            <div class="step" id="step3">Step 3</div>
+            <div class="step" id="step4">Step 4</div>
+            <div class="step" id="step5"><a href="paymentInsert.jsp">Step 5</a></div>
+        </div>
+
+        <div class="form" id="form1">
+            <!-- Step 1 content goes here -->
+            <h2></h2>
+        </div>
+
+        <div class="form" id="form2">
+            <!-- Step 2 content goes here -->
+            <h2>Step 2 Form</h2>
+        </div>
+
+        <div class="form" id="form3">
+            <!-- Step 3 content goes here -->
+            <h2>Step 3 Form</h2>
+        </div>
+
+        <div class="form" id="form4">
+            <!-- Step 4 content goes here -->
+            <h2>Step 4 Form</h2>
+        </div>
+
+        <div class="form" id="form5">
+            <!-- Step 5 content goes here -->
+            <h2>Step 5 Form</h2>
+        </div>
+
+        <script>
+            const steps = document.querySelectorAll('.step');
+            const forms = document.querySelectorAll('.form');
+
+            steps.forEach((step, index) => {
+                step.addEventListener('click', () => {
+                    // Hide all forms
+                    forms.forEach(form => form.classList.remove('active'));
+
+                    // Show the selected form
+                    forms[index].classList.add('active');
+                });
+            });
+        </script>
+        <footer>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="social-media">
+
+                <h3>Follow Us</h3>
+                <img src="images\foot.jpg" alt="Chicago" style="width:5%;" style="height:5%;">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+
+            </div>
+        </footer>
+    </body>
+</html>

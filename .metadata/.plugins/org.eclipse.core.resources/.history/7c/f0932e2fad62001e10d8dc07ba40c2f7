@@ -1,0 +1,52 @@
+package pay.customer;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class PaymentDBUtil {
+	public static List<Payment> validate(String FullName,String Email,String Address,String City,String Province,int ZipCode,String NameOnCard,String CardNumber,String ValidThrough,int CVV){
+		
+		ArrayList<Payment> pay=new ArrayList<>();
+		
+		//create database connection
+		String url="jdbc:mysql://localhost:3306/event";
+		String user="root";
+		String pass="apple#456";
+		
+		//validate
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con=DriverManager.getConnection(url,user,pass);
+			Statement stmt=con.createStatement();
+			
+			String sql="select * from payment where fullname='"+FullName+" and email='"+Email+"'";
+			ResultSet rs=stmt.executeQuery(sql);
+			
+			if(rs.next()) {
+				int pid=rs.getInt(1);
+				String fullname=rs.getString(2);
+				String email=rs.getString(3);
+				String address=rs.getString(4);
+				String city=rs.getString(5);
+				String province=rs.getString(6);
+				int zipcode=rs.getInt(7);
+				String nameoncard=rs.getString(8);
+				String cardnumber=rs.getInt(9);
+				String validthrough=rs.getString(10);
+				int cvv=rs.getInt(11);
+				
+				Payment p=new Payment(pid,fullname,email,address,city,province,zipcode,nameoncard,cardnumber,validthrough,cvv);
+				pay.add(p);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return pay;
+	}
+}

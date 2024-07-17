@@ -1,0 +1,10 @@
+package pay.customer;
+
+import java.util.List;
+
+
+public class PaymentDBUtil {
+	public static List<Payment> validate(String fullname,String email,String address,String city,String province,int zipcode,String nameoncard,int cardnumber,String validthrough,int cvv){
+		
+	}
+}

@@ -1,0 +1,48 @@
+package pay.customer;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+
+
+public class paymentServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String fullname=request.getParameter("fname");
+		String email=request.getParameter("email");
+		String address=request.getParameter("address");
+		String city=request.getParameter("city");
+		String province=request.getParameter("province");
+		int zipcode=Integer.parseInt(request.getParameter("zip"));
+		String nameoncard=request.getParameter("cname");
+		String cardnumber=request.getParameter("cnumber");
+		String validthrough=request.getParameter("valid");
+		int cvv=Integer.parseInt(request.getParameter("cvv"));
+
+		
+		
+		
+		
+		
+		try {
+		List<Payment>payDetails=PaymentDBUtil.validate(fullname, email, address, city, province, zipcode, nameoncard, cardnumber, validthrough, cvv);
+		request.setAttribute("payDetails", payDetails);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		RequestDispatcher dis=request.getRequestDispatcher("cuspayment.jsp");
+		dis.forward(request, response);
+	}
+
+}

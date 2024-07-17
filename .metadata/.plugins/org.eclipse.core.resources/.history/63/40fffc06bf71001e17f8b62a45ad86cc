@@ -1,0 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+  
+    <link rel="stylesheet" type="text/css" href="css\useraccount.css">
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+
+        <nav class="navbar navbar-inverse">
+
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="#"><b>Elegant and Elite Events</b></a>
+
+                </div>
+                <ul class="nav navbar-nav">
+
+                    <li><a href="Home.jsp">Home</a></li>
+                    <li ><a href="Navigate.jsp">Book now</a></li>
+                    <li><a href="Signup.jsp">Sign Up</a></li>
+                    <li class="active"><a href="Signin.jsp">Sign in</a></li>
+
+
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    </head>
+    <body>
+        <br><br> <br><br> 
+        <div class="container">
+           
+            <div class="user-info">
+
+                <!-- Display user information here (e.g., name, email, etc.) -->
+            </div>
+            <div class="user-actions">
+                <button id="edit-customer">Edit Customer Form</button>
+                <button id="edit-event">Edit Event Details Form</button>
+                <button id="edit-payment">Edit Payment Form</button>
+            </div>
+        </div>
+        <footer>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="social-media">
+
+                <h3>Follow Us</h3>
+                <img src="C:\Users\USER\Desktop\foot.jpg" alt="Chicago" style="width:5%;" style="height:5%;">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+
+            </div>
+        </footer>
+    </body>
+</html>

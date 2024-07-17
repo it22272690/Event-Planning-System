@@ -1,0 +1,35 @@
+package pay.customer;
+
+public class Payment {
+    private int pid;
+    private String FullName;
+    private String Email;
+    private String Address;
+    private String City;
+    private String Province;
+    private int ZipCode;
+    private String NameOnCard;
+    private String CardNumber;
+    private String ValidThrough;
+    private int CVV;
+
+    public Payment(int pid, String fullName, String email, String address, String city, String province, int zipCode,
+                   String nameOnCard, String cardNumber, String validThrough, int cVV) {
+        this.pid = pid;
+        FullName = fullName;
+        Email = email;
+        Address = address;
+        City = city;
+        Province = province;
+        ZipCode = zipCode;
+        NameOnCard = nameOnCard;
+        CardNumber = cardNumber;
+        ValidThrough = validThrough;
+        CVV = cVV;
+    }
+
+    public int getPid() {
+        return pid;
+    }
+
+    public String getFullName() {

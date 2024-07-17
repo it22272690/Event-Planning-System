@@ -1,0 +1,89 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" href="C:\Users\USER\Desktop\pp.css">
+</head>
+<body>
+   <div class="container">
+
+    <form action="pay" method="post">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">billing address</h3>
+
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" name="fname" placeholder="Jennie Maxwell">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" name="email" placeholder="jennie@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" placeholder="No 35/1,Townhill,Kandy">
+                </div>
+                <div class="inputBox">
+                    <span>city :</span>
+                    <input type="text" placeholder="Kandy">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>Province:</span>
+                        <input type="text" placeholder="Central">
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input type="text" placeholder="20160">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="C:\Users\USER\Downloads\payment gateway\payment gateway\images\card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" placeholder="Jennie Maxwell">
+                </div>
+                <div class="inputBox">
+                    <span>Card number :</span>
+                    <input type="text" placeholder="1234-3212-4563-3221">
+                </div>
+                <div class="inputBox">
+                    <span>Valid through :</span>
+                    <input type="text" placeholder="(MM/YY)">
+                </div>
+			 <div class="flex">
+                    <div class="inputBox">
+                        <span>CVV(3 Digits) :</span>
+                        <input type="text" placeholder="123">
+                    </div>
+                </div>
+
+            </div>
+    
+        </div>
+
+        <center><input type="submit" value="pay" class="submit-btn"></center>
+
+    </form>
+
+</div>    
+    
+</body>
+</html>

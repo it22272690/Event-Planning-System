@@ -1,0 +1,11 @@
+// Function to show the thank you popup
+function showPopup() {
+    var popup = document.getElementById("thank-you-popup");
+    popup.style.display = "block";
+}
+
+// Function to close the thank you popup
+function closePopup() {
+    var popup = document.getElementById("thank-you-popup");
+    popup.style.display = "none";
+}

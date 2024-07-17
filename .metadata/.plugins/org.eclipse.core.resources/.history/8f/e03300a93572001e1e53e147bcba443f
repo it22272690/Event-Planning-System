@@ -1,0 +1,49 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planning System Signin</title>
+    <link rel="stylesheet" href="css/signin.css">
+    <link rel="stylesheet" href="css/home.css">
+    <%@include file="Header.jsp" %>
+</head>
+<body>
+<style>
+   body {
+            
+            background-image: url("images/signin.jpg");
+            font-family: 'Times New Roman';
+        
+        }
+        footer {
+    background-color: #222; /* Dark background for footer */
+    padding: 20px;
+    text-align: left;
+}
+</style>
+    <br><br><br><br><br><br>
+    <div class="container">
+        <h1>Sign in</h1>
+        <form id="signinForm" action="useraccount.jsp" method="post">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+
+            
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+
+            
+
+            <button type="submit">Sign in</button>
+        </form>
+        <p id="errorText"></p>
+    </div><br><br><br>
+ <%@include file="Footer.jsp" %>
+</body>
+</html>

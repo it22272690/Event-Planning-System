@@ -1,0 +1,8 @@
+package pay.customer;
+
+public class DBConnect {
+	
+	private static String url="jdbc:mysql://localhost:3306/event";
+	private static String user="root";
+	private static String pass="apple#456";
+}

@@ -1,0 +1,33 @@
+package pay.customer;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.List;
+import java.util.List;
+import javax.servlet.RequestDispatcher;
+public class paymentServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String fullname=request.getParameter("fname");
+		String email=request.getParameter("email");
+		
+		try {
+		List<Payment>payDetails=PaymentDBUtil.validate(fullname, email);
+		request.setAttribute("payDetails", payDetails);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		jakarta.servlet.RequestDispatcher dis=request.getRequestDispatcher("cuspayment.jsp");
+		dis.forward(request, response);
+	}
+
+}

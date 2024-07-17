@@ -1,0 +1,142 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family: 'Courier New';
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+  border-radius: 3px;
+
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #EEE8AA 60%,#778899 40.1%);
+
+}
+
+.container form{
+  padding:20px;
+  width:900px;
+  background: #FFFAF0;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+ 
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:70px;
+
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+
+}
+
+.container form .row .col .title{
+  font-size: 20px;
+  color:#000;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid  #BC8F8F;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid ;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+ 
+}
+
+.container form .submit-btn{
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 5px 5px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  width:20%;
+ border-radius: 6px;
+ 
+   
+}
+/* Popup styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.popup-content {
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    margin: 100px auto;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.container form .submit-btn:hover{opacity: 1}
+
+
+
+
